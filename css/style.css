@@ -9,15 +9,14 @@
 }
 .form-sign-in{
     border-radius: 10px;
-    width: 400px;
 }
 button[type="submit"]{
     background-color: #00C1FE;
 }
 .E-classe {
     border-left:solid 6px #00C1FE;
-    padding-left: 12.5px;
-    font-size: 32px;
+    font-size: 30px;
+    font-weight: bold;
 }
 .bg-sign-in p{
     font-size: 14px;
