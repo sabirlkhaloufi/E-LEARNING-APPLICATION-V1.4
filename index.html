@@ -8,11 +8,31 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body >
 
+   <main class="bg-sign-in d-flex justify-content-center align-items-center">
+      <div class=" form-sign-in bg-white  h-auto text-center p-3 pe-4 ps-4 d-flex flex-column gap-3 ">
+        <h1 class="E-classe text-start ms-4" >E-classe</h1>
+        <div>
+          <h2 class=" sign-in text-uppercase">sign in</h2>
+        <p>Enter your credentials to access your account</p>
+        </div>
+        <form action="/action_page.php" class="">
+          <div class="mb-3 mt-3 text-start">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+          <div class="mb-3 text-start">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+          </div>
+          <button type="submit" class="btn text-white w-100 text-uppercase">sign in</button>
+          <p class="mt-4">Forgot your password? <a href="#">Reset Password</a></p>
+        </form>
+     </div>
+   </main>
 
-    <script src="js/popper.min.js"></script>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 </html>

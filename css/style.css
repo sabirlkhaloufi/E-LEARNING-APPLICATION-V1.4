@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200&display=swap');
+*{
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+}
+.bg-sign-in{
+    background: linear-gradient(69.66deg, #00C1FE 19.39%, #FAFFC1 96.69%);
+    height:100vh;
+}
+.form-sign-in{
+    border-radius: 10px;
+    width: 400px;
+}
+button[type="submit"]{
+    background-color: #00C1FE;
+}
+.E-classe {
+    border-left:solid 6px #00C1FE;
+    padding-left: 12.5px;
+    font-size: 32px;
+}
+.bg-sign-in p{
+    font-size: 14px;
+    line-height:17,07px;
+    font-weight: 400;
+    color:#6C6C6C;
+}
+.bg-sign-in label{
+    font: 14px;
+    font-weight: 500px;
+    line-height: 17px;
+    color: #6C6C6C;
+}
+
+input[type="email"]::placeholder,input[type="password"]::placeholder{
+    font-size: 12px;
+    line-height: 15px;
+    color: #CDCDCD;
+}
+.sign-in{
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 600;
+}
