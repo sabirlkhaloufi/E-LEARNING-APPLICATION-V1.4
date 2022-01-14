@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200&display=swap');
+:root {
+    --bg-gradient:linear-gradient(69.66deg, #00C1FE 19.39%, #FAFFC1 96.69%);
+    --main-text-color: #009d63;
+    --second-text-color: #bbbec5;
+    --second-bg-color: #c1efde;
+  }
 *{
     font-family: 'Montserrat',sans-serif;
     font-style: normal;
 }
 .bg-sign-in{
-    background: linear-gradient(69.66deg, #00C1FE 19.39%, #FAFFC1 96.69%);
+    background:var(--bg-gradient);
     height:100vh;
 }
 .form-sign-in{
@@ -15,8 +21,6 @@ button[type="submit"]{
 }
 .E-classe {
     border-left:solid 6px #00C1FE;
-    font-size: 30px;
-    font-weight: bold;
 }
 .bg-sign-in p{
     font-size: 14px;
@@ -41,3 +45,56 @@ input[type="email"]::placeholder,input[type="password"]::placeholder{
     line-height: 27px;
     font-weight: 600;
 }
+
+/* start dashboard */
+/* start sidebar */
+.bg-sidebar{
+    background-color: #FAFFC1;
+}
+.bg-content{
+    background:#FDFDFD;
+}
+.h7{
+    font-size: 14px;
+}
+/* end sidebar */
+/* start cards */
+.admin-color{
+    color: #00C1FE ;
+}
+.cards .card__items{
+    border-radius: 8px;
+    width: 220px;
+    height: 150px;
+}
+.card__items--blue{
+    background-color:#F0F9FF;
+}
+.card__items--blue i{
+    color: #74C1ED;
+}
+.card__items--rose{
+    background-color:#FEF6FB;
+}
+.card__items--rose i{
+    color:#EE95C5;
+}
+.card__items--yellow{
+    background-color:#FEFBEC;
+}
+.card__items--yellow i{
+    color:#00C1FE;
+}
+.card__items--gradient{
+    background: linear-gradient(110.42deg, #00C1FE 18.27%, #FAFFC1 91.84%);
+}
+.card__items--gradient i{
+    color:#FFFFFF;
+}
+#nbr{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+/* end cards */
+/* end dashboard */

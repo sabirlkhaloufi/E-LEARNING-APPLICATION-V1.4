@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<body>
+    <main class="dashboard d-flex">
+        <!-- start sidebar -->
+
+        <div class="bg-sidebar vh-100 w-25 d-none d-md-block">
+            <div class="log">
+                <h1 class="E-classe text-start ms-3 ps-1 mt-3 h6 fw-bold">E-classe</h1>
+            </div>
+            <div class="img-admin d-flex flex-column align-items-center text-center gap-2">
+                <img class="rounded-circle" src="/assets/img/img-admin.jpeg" alt="img-admin" height="120" width="120">
+                <h3 class="h6 fw-bold">admine name</h3>
+                <span class="h7 admin-color">admin</span>
+            </div>
+            <div class=" bg-list d-flex flex-column align-items-center fw-bold gap-4 mt-4 ">
+                <ul class="d-flex flex-column align-items-start gap-4 list-unstyled">
+                    <li class="h7"><a class=" text-decoration-none text-dark" href="dashboard.html"><i
+                                class="fal fa-home-lg-alt me-2"></i> <span>Home</span></a></li>
+                    <li class="h7"><a class=" text-decoration-none text-dark" href=""><i
+                                class="fal fa-bookmark me-2"></i> <span>Course</span></a></li>
+                    <li class="h7"><a class=" text-decoration-none text-dark" href=""><i
+                                class="far fa-graduation-cap me-2"></i> <span>Students</span></a></li>
+                    <li class="h7"><a class=" text-decoration-none text-dark" href=""><i
+                                class="fal fa-usd-square me-2"></i> <span>Payment</span></a></li>
+                    <li class="h7"><a class=" text-decoration-none text-dark" href=""><i
+                                class="fal fa-file-chart-line me-2"></i> <span>Report</span></a></li>
+                    <li class="h7"><a class=" text-decoration-none text-dark" href=""><i
+                                class="fal fa-sliders-v-square me-2"></i> <span>Settings</span></a></li>
+                </ul>
+                <ul class="logout d-flex justify-content-start list-unstyled">
+                    <li class=" h7"><a class="text-decoration-none text-dark" href=""><span>Logout</span><i
+                                class="fal fa-sign-out-alt ms-2"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- end sidebar -->
+
+        <!-- start content page -->
+        <div class="bg-content container-fluid px-4">
+            <nav class="navbar container-fluid navbar-light bg-white">
+                <a><i class="fal fa-caret-circle-down fa-rotate-90 h5"></i></a>
+                <div class="d-flex align-items-center gap-4">
+                    <form class="d-flex align-items-center">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <i class="fal fa-search"></i>
+                    </form>
+                    <i class="fal fa-bell"></i>
+                </div>
+            </nav>
+            <div class="cards row gap-3 justify-content-center mt-5">
+                <div class=" card__items card__items--blue col-md-3 position-relative">
+                    <div class="card__students d-flex flex-column gap-2 mt-3">
+                        <i class="far fa-graduation-cap h3"></i>
+                        <span>Students</span>
+                    </div>
+                    <div class="card__nbr-students">
+                        <span class="h5 fw-bold" id="nbr">243</span>
+                    </div>
+                </div>
+
+                <div class=" card__items card__items--rose col-md-3 position-relative">
+                    <div class="card__Course d-flex flex-column gap-2 mt-3">
+                        <i class="fal fa-bookmark h3"></i>
+                        <span>Course</span>
+                    </div>
+                    <div class="card__nbr-course">
+                        <span class="h5 fw-bold" id="nbr">13</span>
+                    </div>
+                </div>
+
+                <div class=" card__items card__items--yellow col-md-3 position-relative">
+                    <div class="card__payments d-flex flex-column gap-2 mt-3">
+                        <i class="fal fa-usd-square h3"></i>
+                        <span>Payments</span>
+                    </div>
+                    <div class="card__payments">
+                        <span class="h5 fw-bold" id="nbr">DHS 556,000</span>
+                    </div>
+                </div>
+
+                <div class="card__items card__items--gradient col-md-3 position-relative">
+                    <div class="card__users d-flex flex-column gap-2 mt-3">
+                        <i class="fal fa-user h3"></i>
+                        <span>Users</span>
+                    </div>
+                    <span class="h5 fw-bold" id="nbr">3</span>
+                </div>
+            </div>
+
+        </div>
+        <!-- end contentpage -->
+    </main>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <!-- <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
+
+        toggleButton.onclick = function () {
+            el.classList.toggle("toggled");
+        };
+    </script> -->
+</body>
+
+</html>
