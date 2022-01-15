@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>studens_list</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body class="bg-content">
+    <main class="dashboard d-flex">
+        <!-- start sidebar -->
+
+        <div class="bg-sidebar vh-100 w-25 d-none d-md-block position-sticky top-0">
+            <div class="log">
+                <h1 class="E-classe text-start ms-3 ps-1 mt-3 h6 fw-bold">E-classe</h1>
+            </div>
+            <div class="img-admin d-flex flex-column align-items-center text-center gap-2">
+                <img class="rounded-circle" src="/assets/img/img-admin.jpeg" alt="img-admin" height="120" width="120">
+                <h3 class="h6 fw-bold">admine name</h3>
+                <span class="h7 admin-color">admin</span>
+            </div>
+            <div class=" bg-list d-flex flex-column align-items-center fw-bold gap-4 mt-4 ">
+                <ul class="d-flex flex-column align-items-start gap-4 list-unstyled">
+                    <li class="h7"><a class=" text-decoration-none text-dark" href="dashboard.html"><i
+                                class="fal fa-home-lg-alt me-2"></i> <span>Home</span></a></li>
+                    <li class="h7"><a class=" text-decoration-none text-dark" href=""><i
+                                class="fal fa-bookmark me-2"></i> <span>Course</span></a></li>
+                    <li class="h7"><a class=" text-decoration-none text-dark" href="students_list.html"><i
+                                class="far fa-graduation-cap me-2"></i> <span>Students</span></a></li>
+                    <li class="h7"><a class=" text-decoration-none text-dark" href=""><i
+                                class="fal fa-usd-square me-2"></i> <span>Payment</span></a></li>
+                    <li class="h7"><a class=" text-decoration-none text-dark" href=""><i
+                                class="fal fa-file-chart-line me-2"></i> <span>Report</span></a></li>
+                    <li class="h7"><a class=" text-decoration-none text-dark" href=""><i
+                                class="fal fa-sliders-v-square me-2"></i> <span>Settings</span></a></li>
+                </ul>
+                <ul class="logout d-flex justify-content-start list-unstyled">
+                    <li class=" h7"><a class="text-decoration-none text-dark" href=""><span>Logout</span><i
+                                class="fal fa-sign-out-alt ms-2"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- end sidebar -->
+
+        <!-- start content page -->
+        <div class="container-fluid px-4">
+            <nav class="navbar container-fluid navbar-light bg-white position-sticky top-0">
+                <a><i class="fal fa-caret-circle-down fa-rotate-90 h5"></i></a>
+                <div class="d-flex align-items-center gap-4">
+                    <form class="d-flex align-items-center">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <i class="fal fa-search"></i>
+                    </form>
+                    <i class="fal fa-bell"></i>
+                </div>
+            </nav>
+
+            <!-- start studient list table -->
+            <div class="student-list-header d-flex justify-content-between align-items-center py-2">
+                <div class="title h6 fw-bold">Students list</div>
+                <div class="btn-add d-flex gap-3 align-items-center">
+                    <div class="short">
+                        <i class="far fa-sort"></i>
+                    </div>
+                    <button type="button" class="btn btn-primary">add new student</button>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table student_list table-borderless">
+                    <thead>
+                        <tr class="rounded-3 d-flex justify-content-around mt-2 align-items-center">
+                            <th></th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Enroll Number</th>
+                            <th>Date of admission</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="rounded-3 bg-white d-flex justify-content-around mt-2 align-items-center">
+                            <td><img src="/assets/img/avatar.svg" alt="" height="50" width="50"></td>
+                            <td>username</td>
+                            <td>user@email.com</td>
+                            <td>7305477760</td>
+                            <td>1234567305477760</td>
+                            <td>08-Dec,2021</td>
+                            <td class="d-md-flex gap-3 ">
+                                <i class="far fa-pen"></i>
+                                <i class="far fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr class="rounded-3 bg-white d-flex justify-content-around mt-2 align-items-center">
+                            <td><img src="/assets/img/avatar.svg" alt="" height="50" width="50"></td>
+                            <td>username</td>
+                            <td>user@email.com</td>
+                            <td>7305477760</td>
+                            <td>1234567305477760</td>
+                            <td>08-Dec,2021</td>
+                            <td class="d-md-flex gap-3 ">
+                                <i class="far fa-pen"></i>
+                                <i class="far fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr class="rounded-3 bg-white d-flex justify-content-around mt-2 align-items-center">
+                            <td><img src="/assets/img/avatar.svg" alt="" height="50" width="50"></td>
+                            <td>username</td>
+                            <td>user@email.com</td>
+                            <td>7305477760</td>
+                            <td>1234567305477760</td>
+                            <td>08-Dec,2021</td>
+                            <td class="d-md-flex gap-3 ">
+                                <i class="far fa-pen"></i>
+                                <i class="far fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr class="rounded-3 bg-white d-flex justify-content-around mt-2 align-items-center">
+                            <td><img src="/assets/img/avatar.svg" alt="" height="50" width="50"></td>
+                            <td>username</td>
+                            <td>user@email.com</td>
+                            <td>7305477760</td>
+                            <td>1234567305477760</td>
+                            <td>08-Dec,2021</td>
+                            <td class="d-md-flex gap-3 ">
+                                <i class="far fa-pen"></i>
+                                <i class="far fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr class="rounded-3 bg-white d-flex justify-content-around mt-2 align-items-center">
+                            <td><img src="/assets/img/avatar.svg" alt="" height="50" width="50"></td>
+                            <td>username</td>
+                            <td>user@email.com</td>
+                            <td>7305477760</td>
+                            <td>1234567305477760</td>
+                            <td>08-Dec,2021</td>
+                            <td class="d-md-flex gap-3 ">
+                                <i class="far fa-pen"></i>
+                                <i class="far fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr class="rounded-3 bg-white d-flex justify-content-around mt-2 align-items-center">
+                            <td><img src="/assets/img/avatar.svg" alt="" height="50" width="50"></td>
+                            <td>username</td>
+                            <td>user@email.com</td>
+                            <td>7305477760</td>
+                            <td>1234567305477760</td>
+                            <td>08-Dec,2021</td>
+                            <td class="d-md-flex gap-3 ">
+                                <i class="far fa-pen"></i>
+                                <i class="far fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr class="rounded-3 bg-white d-flex justify-content-around mt-2 align-items-center">
+                            <td><img src="/assets/img/avatar.svg" alt="" height="50" width="50"></td>
+                            <td>username</td>
+                            <td>user@email.com</td>
+                            <td>7305477760</td>
+                            <td>1234567305477760</td>
+                            <td>08-Dec,2021</td>
+                            <td class="d-md-flex gap-3 ">
+                                <i class="far fa-pen"></i>
+                                <i class="far fa-trash"></i>
+                            </td>
+                        </tr>
+                        <tr class="rounded-3 bg-white d-flex justify-content-around mt-2 align-items-center">
+                            <td><img src="/assets/img/avatar.svg" alt="" height="50" width="50"></td>
+                            <td>username</td>
+                            <td>user@email.com</td>
+                            <td>7305477760</td>
+                            <td>1234567305477760</td>
+                            <td>08-Dec,2021</td>
+                            <td class="d-md-flex gap-3 ">
+                                <i class="far fa-pen"></i>
+                                <i class="far fa-trash"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            <!-- end studient list table -->
+
+        </div>
+        <!-- end contentpage -->
+    </main>
+    <script src="/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

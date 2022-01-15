@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
-<body>
+<body class="bg-content">
     <main class="dashboard d-flex">
         <!-- start sidebar -->
 
-        <div class="bg-sidebar vh-100 w-25 d-none d-md-block">
+        <div class="bg-sidebar vh-100 w-25 d-none d-md-block position-sticky top-0">
             <div class="log">
                 <h1 class="E-classe text-start ms-3 ps-1 mt-3 h6 fw-bold">E-classe</h1>
             </div>
@@ -30,7 +30,7 @@
                                 class="fal fa-home-lg-alt me-2"></i> <span>Home</span></a></li>
                     <li class="h7"><a class=" text-decoration-none text-dark" href=""><i
                                 class="fal fa-bookmark me-2"></i> <span>Course</span></a></li>
-                    <li class="h7"><a class=" text-decoration-none text-dark" href=""><i
+                    <li class="h7"><a class=" text-decoration-none text-dark" href="students_list.html"><i
                                 class="far fa-graduation-cap me-2"></i> <span>Students</span></a></li>
                     <li class="h7"><a class=" text-decoration-none text-dark" href=""><i
                                 class="fal fa-usd-square me-2"></i> <span>Payment</span></a></li>
@@ -49,7 +49,7 @@
         <!-- end sidebar -->
 
         <!-- start content page -->
-        <div class="bg-content container-fluid px-4">
+        <div class="container-fluid px-4">
             <nav class="navbar container-fluid navbar-light bg-white">
                 <a><i class="fal fa-caret-circle-down fa-rotate-90 h5"></i></a>
                 <div class="d-flex align-items-center gap-4">
@@ -104,14 +104,6 @@
         <!-- end contentpage -->
     </main>
     <script src="/js/bootstrap.bundle.js"></script>
-    <!-- <script>
-        var el = document.getElementById("wrapper");
-        var toggleButton = document.getElementById("menu-toggle");
-
-        toggleButton.onclick = function () {
-            el.classList.toggle("toggled");
-        };
-    </script> -->
 </body>
 
 </html>
