@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>studens_list</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
+
 <body class="bg-content">
     <main class="dashboard d-flex">
         <!-- start sidebar -->
@@ -50,7 +51,7 @@
 
         <!-- start content page -->
         <div class="container-fluid px-4">
-            <nav class="navbar container-fluid navbar-light bg-white">
+            <nav class="navbar container-fluid navbar-light bg-white position-sticky top-0">
                 <a><i class="fal fa-caret-circle-down fa-rotate-90 h5"></i></a>
                 <div class="d-flex align-items-center gap-4">
                     <form class="d-flex align-items-center">
@@ -60,45 +61,71 @@
                     <i class="fal fa-bell"></i>
                 </div>
             </nav>
-            <div class="cards row gap-3 justify-content-center mt-5">
-                <div class=" card__items card__items--blue col-md-3 position-relative">
-                    <div class="card__students d-flex flex-column gap-2 mt-3">
-                        <i class="far fa-graduation-cap h3"></i>
-                        <span>Students</span>
-                    </div>
-                    <div class="card__nbr-students">
-                        <span class="h5 fw-bold" id="nbr">243</span>
-                    </div>
-                </div>
 
-                <div class=" card__items card__items--rose col-md-3 position-relative">
-                    <div class="card__Course d-flex flex-column gap-2 mt-3">
-                        <i class="fal fa-bookmark h3"></i>
-                        <span>Course</span>
+            <!-- start studient list table -->
+            <div class="student-list-header d-flex justify-content-between align-items-center py-2">
+                <div class="title h6 fw-bold">Payment Details</div>
+                <div class="btn-add d-flex gap-3 align-items-center">
+                    <div class="short">
+                        <i class="far fa-sort"></i>
                     </div>
-                    <div class="card__nbr-course">
-                        <span class="h5 fw-bold" id="nbr">13</span>
-                    </div>
-                </div>
-
-                <div class=" card__items card__items--yellow col-md-3 position-relative">
-                    <div class="card__payments d-flex flex-column gap-2 mt-3">
-                        <i class="fal fa-usd-square h3"></i>
-                        <span>Payments</span>
-                    </div>
-                    <div class="card__payments">
-                        <span class="h5 fw-bold" id="nbr">DHS 556,000</span>
-                    </div>
-                </div>
-
-                <div class="card__items card__items--gradient col-md-3 position-relative">
-                    <div class="card__users d-flex flex-column gap-2 mt-3">
-                        <i class="fal fa-user h3"></i>
-                        <span>Users</span>
-                    </div>
-                    <span class="h5 fw-bold" id="nbr">3</span>
                 </div>
             </div>
+            <div class="table table-responsive">
+                <table class="table table-striped table-borderless">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Payment Schedule</th>
+                            <th>Bill Number</th>
+                            <th>Amount Paid</th>
+                            <th>Balance amount</th>
+                            <th>Date </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr >
+                            <td>Karthi</td> 
+                            <td>First</td>  
+                            <td>00012223</td>
+                            <td>DHS 100,000</td>
+                            <td>DHS 500,000</td>
+                            <td>05-Jan, 2022</td>
+                            <td><i class="fal fa-eye"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Karthi</td> 
+                            <td>First</td>  
+                            <td>00012223</td>
+                            <td>DHS 100,000</td>
+                            <td>DHS 500,000</td>
+                            <td>05-Jan, 2022</td>
+                            <td><i class="fal fa-eye"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Karthi</td> 
+                            <td>First</td>  
+                            <td>00012223</td>
+                            <td>DHS 100,000</td>
+                            <td>DHS 500,000</td>
+                            <td>05-Jan, 2022</td>
+                            <td><i class="fal fa-eye"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Karthi</td> 
+                            <td>First</td>  
+                            <td>00012223</td>
+                            <td>DHS 100,000</td>
+                            <td>DHS 500,000</td>
+                            <td>05-Jan, 2022</td>
+                            <td><i class="fal fa-eye"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- end studient list table -->
 
         </div>
         <!-- end contentpage -->

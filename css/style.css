@@ -104,11 +104,11 @@ input[type="email"]::placeholder,input[type="password"]::placeholder{
 .student_list{
     font-size: 14px;
 }
-.student_list th{
+.table th{
     font-size: 12px;
     color:#ACACAC;
 }
-.student_list i{
+.table i{
     color:#00C1FE;
 }
 .student-list-header{
