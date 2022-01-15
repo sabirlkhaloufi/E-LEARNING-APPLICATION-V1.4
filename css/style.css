@@ -52,7 +52,7 @@ input[type="email"]::placeholder,input[type="password"]::placeholder{
     background-color: #FAFFC1;
 }
 .bg-content{
-    background:#FDFDFD;
+    background:#F8F8F8;
 }
 .h7{
     font-size: 14px;
@@ -98,3 +98,35 @@ input[type="email"]::placeholder,input[type="password"]::placeholder{
 }
 /* end cards */
 /* end dashboard */
+
+
+/* start students list  */
+.student_list{
+    font-size: 14px;
+}
+.student_list th{
+    font-size: 12px;
+    color:#ACACAC;
+}
+.student_list i{
+    color:#00C1FE;
+}
+.student-list-header{
+    border-bottom: 2px solid #E5E5E5;
+}
+.student-list-header i{
+    color:#00C1FE;
+}
+
+.btn-primary{
+    background-color: #00C1FE;
+  border-color: #00C1FE;
+}
+.btn-primary:hover {
+    background-color: #04a6d8;
+  border-color: #04a6d8;
+}
+.btn-primary:focus{
+    background-color: none;
+}
+/* end students list */
