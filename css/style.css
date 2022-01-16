@@ -4,7 +4,7 @@
     font-style: normal;
 }
 .bg-sign-in{
-    background:var(--bg-gradient);
+    background:linear-gradient(69.66deg, #00C1FE 19.39%, #FAFFC1 96.69%);
     height:100vh;
 }
 .form-sign-in{
@@ -145,12 +145,10 @@ a:hover{
     border-radius: 5px;
     width: 130px;
 }
-
-/* media query pour sidebar */
-
 @media screen and (min-width:765px){
     .bg-sidebar{
-        position: static !important;
+        position: sticky !important;
+        top: 0;
         width: 25% !important;
     }
 }
