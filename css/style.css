@@ -32,7 +32,6 @@ input[type="email"]::placeholder,input[type="password"]::placeholder{
     line-height: 27px;
     font-weight: 600;
 }
-
 /* start dashboard */
 /* start sidebar */
 .bg-sidebar{
@@ -49,7 +48,7 @@ input[type="email"]::placeholder,input[type="password"]::placeholder{
 /* end sidebar */
 /* start cards */
 .admin-color{
-    color: #00C1FE ;
+    color: #04b7ee ;
 }
 .cards .card__items{
     border-radius: 8px;
@@ -80,7 +79,7 @@ input[type="email"]::placeholder,input[type="password"]::placeholder{
 .card__items--gradient i{
     color:#FFFFFF;
 }
-#nbr{
+.nbr{
     position: absolute;
     right: 10px;
     bottom: 10px;
