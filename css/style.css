@@ -1,10 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200&display=swap');
-:root {
-    --bg-gradient:linear-gradient(69.66deg, #00C1FE 19.39%, #FAFFC1 96.69%);
-    --main-text-color: #009d63;
-    --second-text-color: #bbbec5;
-    --second-bg-color: #c1efde;
-  }
 *{
     font-family: 'Montserrat',sans-serif;
     font-style: normal;
@@ -50,12 +44,21 @@ input[type="email"]::placeholder,input[type="password"]::placeholder{
 /* start sidebar */
 .bg-sidebar{
     background-color: #FAFFC1;
+    transition: margin 0.6s ease-in-out;
+    z-index: 1;
 }
 .bg-content{
     background:#F8F8F8;
 }
 .h7{
     font-size: 14px;
+}
+.hidden-sidebar{
+    margin-left: -25%;
+    
+}
+.hidden-sidebar-mobile{
+    margin-left: -50%;
 }
 /* end sidebar */
 /* start cards */
@@ -102,11 +105,15 @@ input[type="email"]::placeholder,input[type="password"]::placeholder{
 
 /* start students list  */
 .student_list{
-    font-size: 14px;
+    border-collapse: separate;
+    border-spacing: 0 15px;
 }
 .table th{
     font-size: 12px;
     color:#ACACAC;
+}
+table tbody{
+    font-size: 14px;
 }
 .table i{
     color:#00C1FE;
@@ -130,3 +137,20 @@ input[type="email"]::placeholder,input[type="password"]::placeholder{
     background-color: none;
 }
 /* end students list */
+.fa-search{
+    left:-30px;
+}
+a:hover{
+    background-color: #00C1FE;
+    border-radius: 5px;
+    width: 130px;
+}
+
+/* media query pour sidebar */
+
+@media screen and (min-width:765px){
+    .bg-sidebar{
+        position: static !important;
+        width: 25% !important;
+    }
+}
