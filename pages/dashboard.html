@@ -15,32 +15,33 @@
     <main class="dashboard d-flex">
         <!-- start sidebar -->
 
-        <div class="bg-sidebar vh-100 w-25 d-none d-md-block position-sticky top-0">
-            <div class="log">
+        <div class="bg-sidebar vh-100 w-50 position-absolute">
+            <div class="log d-flex justify-content-between">
                 <h1 class="E-classe text-start ms-3 ps-1 mt-3 h6 fw-bold">E-classe</h1>
+                <i class="far fa-times h4 me-3 close align-self-end d-md-none"></i>
             </div>
             <div class="img-admin d-flex flex-column align-items-center text-center gap-2">
                 <img class="rounded-circle" src="/assets/img/img-admin.jpeg" alt="img-admin" height="120" width="120">
                 <h3 class="h6 fw-bold">admine name</h3>
                 <span class="h7 admin-color">admin</span>
             </div>
-            <div class=" bg-list d-flex flex-column align-items-center fw-bold gap-4 mt-4 ">
-                <ul class="d-flex flex-column align-items-start gap-4 list-unstyled">
-                    <li class="h7"><a class=" text-decoration-none text-dark" href="dashboard.html"><i
-                                class="fal fa-home-lg-alt me-2"></i> <span>Home</span></a></li>
-                    <li class="h7"><a class=" text-decoration-none text-dark" href=""><i
+            <div class=" bg-list d-flex flex-column align-items-center fw-bold gap-2 mt-4 ">
+                <ul class="d-flex flex-column list-unstyled">
+                        <li class="h7"><a class="nav-link text-dark" href="dashboard.html"><i
+                            class="fal fa-home-lg-alt me-2"></i> <span>Home</span></a></li>
+                    <li class="h7"><a class=" nav-link text-dark" href=""><i
                                 class="fal fa-bookmark me-2"></i> <span>Course</span></a></li>
-                    <li class="h7"><a class=" text-decoration-none text-dark" href="students_list.html"><i
+                    <li class="h7"><a class=" nav-link text-dark" href="students_list.html"><i
                                 class="far fa-graduation-cap me-2"></i> <span>Students</span></a></li>
-                    <li class="h7"><a class=" text-decoration-none text-dark" href="payment_details.html"><i
+                    <li class="h7"><a class=" nav-link text-dark" href="payment_details.html"><i
                                 class="fal fa-usd-square me-2"></i> <span>Payment</span></a></li>
-                    <li class="h7"><a class=" text-decoration-none text-dark" href=""><i
+                    <li class="h7"><a class=" nav-link text-dark" href=""><i
                                 class="fal fa-file-chart-line me-2"></i> <span>Report</span></a></li>
-                    <li class="h7"><a class=" text-decoration-none text-dark" href=""><i
+                    <li class="h7"><a class=" nav-link text-dark" href=""><i
                                 class="fal fa-sliders-v-square me-2"></i> <span>Settings</span></a></li>
                 </ul>
                 <ul class="logout d-flex justify-content-start list-unstyled">
-                    <li class=" h7"><a class="text-decoration-none text-dark" href=""><span>Logout</span><i
+                    <li class=" h7"><a class="nav-link text-dark" href=""><span>Logout</span><i
                                 class="fal fa-sign-out-alt ms-2"></i></a></li>
                 </ul>
             </div>
@@ -49,13 +50,14 @@
         <!-- end sidebar -->
 
         <!-- start content page -->
-        <div class="container-fluid px-4">
-            <nav class="navbar container-fluid navbar-light bg-white">
-                <a><i class="fal fa-caret-circle-down fa-rotate-90 h5"></i></a>
+        <div class="container-fluid px">
+            <nav class="navbar container-fluid navbar-light bg-white position-sticky top-0">
+                <div class=""><i class="fal fa-caret-circle-down h5 d-none d-md-block menutoggle fa-rotate-90"></i>
+                    <i class="fas fa-bars h4  d-md-none"></i></div>
                 <div class="d-flex align-items-center gap-4">
                     <form class="d-flex align-items-center">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <i class="fal fa-search"></i>
+                        <i class="fal fa-search position-relative"></i>
                     </form>
                     <i class="fal fa-bell"></i>
                 </div>
@@ -103,6 +105,7 @@
         </div>
         <!-- end contentpage -->
     </main>
+    <script src="../js/script.js"></script>
     <script src="/js/bootstrap.bundle.js"></script>
 </body>
 
