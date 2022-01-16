@@ -16,19 +16,12 @@ button[type="submit"]{
 .E-classe {
     border-left:solid 6px #00C1FE;
 }
-.bg-sign-in p{
+.bg-sign-in p,.bg-sign-in label{
     font-size: 14px;
     line-height:17,07px;
     font-weight: 400;
     color:#6C6C6C;
 }
-.bg-sign-in label{
-    font: 14px;
-    font-weight: 500px;
-    line-height: 17px;
-    color: #6C6C6C;
-}
-
 input[type="email"]::placeholder,input[type="password"]::placeholder{
     font-size: 12px;
     line-height: 15px;
@@ -52,13 +45,6 @@ input[type="email"]::placeholder,input[type="password"]::placeholder{
 }
 .h7{
     font-size: 14px;
-}
-.hidden-sidebar{
-    margin-left: -25%;
-    
-}
-.hidden-sidebar-mobile{
-    margin-left: -50%;
 }
 /* end sidebar */
 /* start cards */
@@ -145,10 +131,19 @@ a:hover{
     border-radius: 5px;
     width: 130px;
 }
-@media screen and (min-width:765px){
+@media screen and (min-width:768px){
     .bg-sidebar{
         position: sticky !important;
         top: 0;
         width: 25% !important;
+    }
+    .hidden-sidebar{
+        margin-left: -25%;
+        
+    }
+}
+@media screen and (max-width:768px){
+    .hidden-sidebar-mobile{
+        margin-left: -50%;
     }
 }
