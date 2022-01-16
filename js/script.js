@@ -11,6 +11,8 @@ menutoggle.addEventListener("click",function(){
 
 })
 
+
+
 barhamburger.addEventListener("click",function(){
     sidebar.classList.remove("hidden-sidebar-mobile");
 })
