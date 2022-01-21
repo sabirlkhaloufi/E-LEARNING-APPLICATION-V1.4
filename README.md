@@ -3,7 +3,7 @@
 dashboard simple pour gestion des course,students,payments...
 
 ## lien de site :
-  https://eclasse-ycode.netlify.app/
+  http://www.eclasseycode.epizy.com/
   
 ## technologie utiliser
   ### front end :
