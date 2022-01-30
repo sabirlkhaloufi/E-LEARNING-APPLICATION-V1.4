@@ -100,7 +100,7 @@ input[type="email"]::placeholder,input[type="password"]::placeholder{
 table tbody{
     font-size: 14px;
 }
-.table i{
+.table a{
     color:#00C1FE;
 }
 .student-list-header{
@@ -125,7 +125,7 @@ table tbody{
 .fa-search{
     left:-30px;
 }
-a:hover{
+.bg-sidebar a:hover{
     background-color: #00C1FE;
     border-radius: 5px;
     width: 130px;
