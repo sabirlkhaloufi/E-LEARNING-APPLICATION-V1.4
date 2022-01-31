@@ -25,15 +25,61 @@
         <?php 
             include "component/header.php";
         ?>
-
-            <!-- start studient list table -->
+          
+        
+            <!-- start student list table -->
             <div class="student-list-header d-flex justify-content-between align-items-center py-2">
                 <div class="title h6 fw-bold">Students list</div>
                 <div class="btn-add d-flex gap-3 align-items-center">
                     <div class="short">
                         <i class="far fa-sort"></i>
                     </div>
-                    <button type="button" class="btn btn-primary">add new student</button>
+
+                    <div class="button-add-student">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">add student</button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Add student</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <form method="GET" action="addstudent.php">
+                                  <div class="">
+                                    <label for="recipient-name" class="col-form-label">img:</label>
+                                    <input type="file" class="form-control" id="recipient-name" name="img">
+                                  </div>
+                                  <div class="">
+                                    <label for="recipient-name" class="col-form-label">Name:</label>
+                                    <input type="text" class="form-control" id="recipient-name" name="Name">
+                                  </div>
+                                  <div class="">
+                                    <label for="recipient-name" class="col-form-label">Email:</label>
+                                    <input type="text" class="form-control" id="recipient-name" name="Email">
+                                  </div>
+                                  <div class="">
+                                    <label for="recipient-name" class="col-form-label">Phone:</label>
+                                    <input type="text" class="form-control" id="recipient-name" name="Phone">
+                                  </div>
+                                  <div class="">
+                                    <label for="recipient-name" class="col-form-label">Enroll Number:</label>
+                                    <input type="text" class="form-control" id="recipient-name" name="EnrollNumber">
+                                  </div>
+                                  <div class="">
+                                    <label for="recipient-name" class="col-form-label">Date of admission:</label>
+                                    <input type="date" class="form-control" id="recipient-name" name="DateOfAdmission">
+                                  </div>
+                                  <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">add student</button>
+                              </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="table-responsive">
@@ -50,53 +96,35 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        $students = [
-                            ["Name"=>"sabir",
-                            "Email"=>"khaloufisabir7@gmail.com",
-                            "Phone"=>"0650043210",
-                            "Enroll Number"=>"1234567890",
-                            "Date of admission"=>"08-Dec,2022"],
-                    
-                            ["Name"=>"sabir",
-                            "Email"=>"khaloufisabir7@gmail.com",
-                            "Phone"=>"0650043210",
-                            "Enroll Number"=>"1234567890",
-                            "Date of admission"=>"08-Dec,2022"],
-
-                            ["Name"=>"sabir",
-                            "Email"=>"khaloufisabir7@gmail.com",
-                            "Phone"=>"0650043210",
-                            "Enroll Number"=>"1234567890",
-                            "Date of admission"=>"08-Dec,2022"],
-
-                            
-                        ];
-                        foreach($students as $students){
-                            echo' <tr class="bg-white align-middle">';
-                                echo '<td><img src="../assets/img/avatar.svg" alt="" height="50" width="50"></td>';
-                                echo'<td>'.$students["Name"].'</td>';
-                                echo'<td>'.$students["Email"].'</td>';
-                                echo'<td>'.$students["Phone"].'</td>';
-                                echo'<td>'.$students["Enroll Number"].'</td>';
-                                echo'<td>'.$students["Date of admission"].'</td>';
-                                echo'<td class="d-md-flex gap-3 mt-3">
-                                    <i class="far fa-pen"></i>
-                                    <i class="far fa-trash"></i>
-                                </td>
-                            </tr>';
-                        }
+                        <?php 
+                            $students = json_decode(file_get_contents('../data/students.json'),true);
+                            foreach($students as $student):
                         ?>
+
+                        <tr class="bg-white align-middle">
+                                <td><img src="<?php echo $student['img'] ?>" alt="img"></td>
+                                <td><?php echo $student['Name'] ?></td>
+                                <td><?php echo $student['Email'] ?></td>
+                                <td><?php echo $student['Phone'] ?></td>
+                                <td><?php echo $student['EnrollNumber'] ?></td>
+                                <td><?php echo $student['DateOfAdmission'] ?></td>
+                                
+                                <td class="d-md-flex gap-3 mt-3">
+                                  <a href="update.php?EnrollNumber=<?php echo $student['EnrollNumber']?>"><i class="far fa-pen"></i></a>
+                                <a href="remove.php?EnrollNumber=<?php echo $student['EnrollNumber']?>"><i class="far fa-trash"></i></a>
+                                </td>
+                        </tr>
+
+                        <?php endforeach; ?>
                     </tbody>
-                    
                 </table>
             </div>
-            <!-- end studient list table -->
+            <!-- end student list table -->
         </div>
-        <!-- end contentpage -->
+        <!-- end content page -->
     </main>
-    <script src="/js/bootstrap.bundle.js"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
 </body>
 
 </html>

@@ -51,40 +51,16 @@
                     <tbody>
 
                        <?php
-                        $payments = [
-                            ["Name"=>"sabir",
-                            "Payment Schedule"=>"First",
-                            "Bill Number"=>"00012223",
-                            "Amount Paid"=>"DHS 100,000",
-                            "Balance amount"=>"DHS 500,000",
-                            "Date" => "05-Jan, 2022"],
-                            ["Name"=>"sabir",
-                            "Payment Schedule"=>"First",
-                            "Bill Number"=>"00012223",
-                            "Amount Paid"=>"DHS 100,000",
-                            "Balance amount"=>"DHS 500,000",
-                            "Date" => "05-Jan, 2022"],
-                            ["Name"=>"sabir",
-                            "Payment Schedule"=>"First",
-                            "Bill Number"=>"00012223",
-                            "Amount Paid"=>"DHS 100,000",
-                            "Balance amount"=>"DHS 500,000",
-                            "Date" => "05-Jan, 2022"],
-                            ["Name"=>"sabir",
-                            "Payment Schedule"=>"First",
-                            "Bill Number"=>"00012223",
-                            "Amount Paid"=>"DHS 100,000",
-                            "Balance amount"=>"DHS 500,000",
-                            "Date" => "05-Jan, 2022"]
-                        ];
-                        foreach($payments as $payments){
+                        $payments = file_get_contents('../data/payments.json');
+                        $payments = json_decode($payments,true);
+                        foreach($payments as $payment){
                             echo'<tr>';
-                                echo'<td>'.$payments["Name"].'</td>';
-                                echo'<td>'.$payments["Payment Schedule"].'</td>';
-                                echo'<td>'.$payments["Bill Number"].'</td>';
-                                echo'<td>'.$payments["Amount Paid"].'</td>';
-                                echo'<td>'.$payments["Balance amount"].'</td>';
-                                echo'<td>'.$payments["Date"].'</td>';
+                                echo'<td>'.$payment['Name'].'</td>';
+                                echo'<td>'.$payment['PaymentSchedule'].'</td>';
+                                echo'<td>'.$payment['BillNumber'].'</td>';
+                                echo'<td>'.$payment['AmountPaid'].'</td>';
+                                echo'<td>'.$payment['BalanceAmount'].'</td>';
+                                echo'<td>'.$payment['Date'].'</td>';
                                 echo '<td><i class="fal fa-eye"></i></td>';
                             echo '</tr>';
                         }
@@ -94,10 +70,10 @@
                 </table>
             </div>
             
-            <!-- end studient list table -->
+            <!-- end student list table -->
 
         </div>
-        <!-- end contentpage -->
+        <!-- end content page -->
     </main>
     <script src="/js/bootstrap.bundle.js"></script>
     <script src="../js/script.js"></script>
