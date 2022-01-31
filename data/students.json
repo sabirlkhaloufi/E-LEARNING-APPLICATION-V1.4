@@ -1,6 +1,6 @@
 [
     {
-        "img": "",
+        "img": "../assets/img/avatar.svg",
         "Name": "abdelaziz",
         "Email": "hassan@gmail.com",
         "Phone": "122",
@@ -8,7 +8,7 @@
         "DateOfAdmission": "2022-01-13"
     },
     {
-        "img": "img-admin.jpeg",
+        "img": "../assets/img/avatar.svg",
         "Name": "abdelaziz afrkla",
         "Email": "hassan@gmail.com",
         "Phone": "122",

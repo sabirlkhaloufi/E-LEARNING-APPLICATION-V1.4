@@ -108,9 +108,14 @@
                                 <td><?php echo $student['Phone'] ?></td>
                                 <td><?php echo $student['EnrollNumber'] ?></td>
                                 <td><?php echo $student['DateOfAdmission'] ?></td>
+<<<<<<< HEAD
                                 
                                 <td class="d-md-flex gap-3 mt-3">
                                   <a href="update.php?EnrollNumber=<?php echo $student['EnrollNumber']?>"><i class="far fa-pen"></i></a>
+=======
+                                <td class="d-md-flex gap-3 mt-3">
+                                  <a href="remove.php?EnrollNumber=<?php echo $student['EnrollNumber']?>"><i class="far fa-pen"></i></a>
+>>>>>>> c75c7c8ba445d1784281eca3960663862eacc59e
                                 <a href="remove.php?EnrollNumber=<?php echo $student['EnrollNumber']?>"><i class="far fa-trash"></i></a>
                                 </td>
                         </tr>
