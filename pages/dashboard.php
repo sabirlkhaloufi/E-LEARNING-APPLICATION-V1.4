@@ -17,6 +17,10 @@
 
         <?php 
             include "component/sidebar.php";
+            include 'conixion.php';
+            $requete = "SELECT * FROM payments_list";
+            $count = $con->query($requete);
+            $nbr_students = $count->rowCount();
         ?>
         <!-- end sidebar -->
 
@@ -32,7 +36,7 @@
                         <span>Students</span>
                     </div>
                     <div class="card__nbr-students">
-                        <span class="h5 fw-bold nbr">243</span>
+                        <span class="h5 fw-bold nbr"><?php echo $nbr_students; ?></span>
                     </div>
                 </div>
 

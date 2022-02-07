@@ -1,18 +1,11 @@
 <?php 
-    $students = json_decode(file_get_contents('../data/students.json'),true);
+    include 'conixion.php';
+    $id = $_GET['Id'];
 
-    var_dump($students);
-    foreach($students as $key => $value){
-        if($value['EnrollNumber'] == $_GET['EnrollNumber']){
-            unset($students[$key]);
-        }
+    if(isset($id)){
+        $stmt = $con ->prepare("DELETE FROM students_list WHERE Id=:id");
+        $stmt->execute(['id' =>$id]);
+
     }
-
-    $students = json_encode($students,JSON_PRETTY_PRINT);
-    file_put_contents('../data/students.json',$students);
-
     header('location:students_list.php');
-    
-
-    // header('location:students_list.php')
 ?>

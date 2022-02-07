@@ -1,6 +1,19 @@
 <?php 
-          $students = json_decode(file_get_contents('../data/students.json'),true);
-          $students[] = $_GET;
-          file_put_contents('../data/students.json',json_encode($students,JSON_PRETTY_PRINT));
-          header('Location:students_list.php');
-?>
+    include 'conixion.php';
+    if(isset($_POST['submit'])){
+        $Name = $_POST['Name'];
+        $Email = $_POST['Email'];
+        $Phone = $_POST['Phone'];
+        $EnrollNumber = $_POST['EnrollNumber'];
+        $DateOfAdmission = $_POST['DateOfAdmission'];
+
+        $requete = $con->prepare("INSERT INTO students_list(Name,Email,Phone,EnrollNumber,DateOfAdmission) VALUES(:Name,:Email,:Phone,:EnrollNumber,:DateOfAdmission)");
+        $requete -> bindvalue('Name',$Name);
+        $requete -> bindvalue('Email',$Email);
+        $requete -> bindvalue('Phone',$Phone);
+        $requete -> bindvalue('EnrollNumber',$EnrollNumber);
+        $requete -> bindvalue('DateOfAdmission',$DateOfAdmission);
+        $requete->execute();
+    }
+    header('location:students_list.php')
+    ?>

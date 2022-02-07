@@ -51,20 +51,22 @@
                     <tbody>
 
                        <?php
-                        $payments = file_get_contents('../data/payments.json');
-                        $payments = json_decode($payments,true);
-                        foreach($payments as $payment){
-                            echo'<tr>';
-                                echo'<td>'.$payment['Name'].'</td>';
-                                echo'<td>'.$payment['PaymentSchedule'].'</td>';
-                                echo'<td>'.$payment['BillNumber'].'</td>';
-                                echo'<td>'.$payment['AmountPaid'].'</td>';
-                                echo'<td>'.$payment['BalanceAmount'].'</td>';
-                                echo'<td>'.$payment['Date'].'</td>';
-                                echo '<td><i class="fal fa-eye"></i></td>';
-                            echo '</tr>';
-                        }
-                        ?>
+                        include 'conixion.php';
+                        $requete = "SELECT * FROM payments_list";
+                        $result = $con -> query($requete);
+
+                        foreach($result as $value):
+                            ?>
+                            <tr>
+                                <td> <?php echo $value['Name'] ?></td>
+                                <td> <?php echo $value['PaymentSchedule'] ?></td>
+                                <td> <?php echo $value['BillNumber'] ?></td>
+                                <td> <?php echo $value['AmountPaid'] ?></td>
+                                <td> <?php echo $value['BalanceAmount'] ?></td>
+                                <td> <?php echo $value['Date'] ?></td>
+                                <td><i class="fal fa-eye"></i></td>
+                            </tr>
+                       <?php endforeach; ?>
                         
                     </tbody>
                 </table>

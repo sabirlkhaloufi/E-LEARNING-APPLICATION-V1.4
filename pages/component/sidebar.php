@@ -12,7 +12,7 @@
                 <ul class="d-flex flex-column list-unstyled">
                         <li class="h7"><a class="nav-link text-dark" href="dashboard.php"><i
                             class="fal fa-home-lg-alt me-2"></i> <span>Home</span></a></li>
-                    <li class="h7"><a class=" nav-link text-dark" href=""><i
+                    <li class="h7"><a class=" nav-link text-dark" href="course.php"><i
                                 class="fal fa-bookmark me-2"></i> <span>Course</span></a></li>
                     <li class="h7"><a class=" nav-link text-dark" href="students_list.php"><i
                                 class="far fa-graduation-cap me-2"></i> <span>Students</span></a></li>

@@ -45,7 +45,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
-                                <form method="GET" action="addstudent.php">
+                                <form method="POST" action="addstudent.php">
                                   <div class="">
                                     <label for="recipient-name" class="col-form-label">img:</label>
                                     <input type="file" class="form-control" id="recipient-name" name="img">
@@ -72,7 +72,7 @@
                                   </div>
                                   <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">add student</button>
+                                <button type="submit" name="submit" class="btn btn-primary">add student</button>
                               </div>
                                 </form>
                               </div>
@@ -97,26 +97,23 @@
                     </thead>
                     <tbody>
                         <?php 
-                            $students = json_decode(file_get_contents('../data/students.json'),true);
-                            foreach($students as $student):
-                        ?>
+                          include 'conixion.php';
+                          $requete = "SELECT * FROM students_list";
+                          $result = $con -> query($requete);
 
-                        <tr class="bg-white align-middle">
-                                <td><img src="<?php echo $student['img'] ?>" alt="img"></td>
-                                <td><?php echo $student['Name'] ?></td>
-                                <td><?php echo $student['Email'] ?></td>
-                                <td><?php echo $student['Phone'] ?></td>
-                                <td><?php echo $student['EnrollNumber'] ?></td>
-                                <td><?php echo $student['DateOfAdmission'] ?></td>
-<<<<<<< HEAD
-                                
+
+                          foreach($result as $value):
+                        ?>
+                      <tr class="bg-white align-middle">
+                        <td><img src="../assets/img/avatar.svg" alt="img"></td>
+                                <td><?php echo $value['Name'] ?></td>
+                                <td><?php echo $value['Email'] ?></td>
+                                <td><?php echo $value['Phone'] ?></td>
+                                <td><?php echo $value['EnrollNumber'] ?></td>
+                                <td><?php echo $value['DateOfAdmission'] ?></td>
                                 <td class="d-md-flex gap-3 mt-3">
-                                  <a href="update.php?EnrollNumber=<?php echo $student['EnrollNumber']?>"><i class="far fa-pen"></i></a>
-=======
-                                <td class="d-md-flex gap-3 mt-3">
-                                  <a href="remove.php?EnrollNumber=<?php echo $student['EnrollNumber']?>"><i class="far fa-pen"></i></a>
->>>>>>> c75c7c8ba445d1784281eca3960663862eacc59e
-                                <a href="remove.php?EnrollNumber=<?php echo $student['EnrollNumber']?>"><i class="far fa-trash"></i></a>
+                                  <a href="modifier.php?Id=<?php echo $value['Id']?>"><i class="far fa-pen"></i></a>
+                                  <a href="remove.php?Id=<?php echo $value['Id']?>"><i class="far fa-trash"></i></a>
                                 </td>
                         </tr>
 
