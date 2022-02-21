@@ -3,7 +3,7 @@
 dashboard simple pour gestion des course,students,payments...
 
 ## lien de site :
-  http://eclasseycode.infinityfreeapp.com/
+  https://eclasseycode.000webhostapp.com/
   
 ## technologie utiliser
   ### front end :
