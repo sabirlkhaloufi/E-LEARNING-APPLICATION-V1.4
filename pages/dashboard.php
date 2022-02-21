@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,9 +17,13 @@
         <?php 
             include "component/sidebar.php";
             include 'conixion.php';
-            $requete = "SELECT * FROM payments_list";
-            $count = $con->query($requete);
-            $nbr_students = $count->rowCount();
+            $nbr_students = $con->query("SELECT * FROM students_list");
+            $nbr_students = $nbr_students->rowCount();
+
+            $nbr_cours = $con->query("SELECT * FROM courses");
+            $nbr_cours = $nbr_cours->rowCount();
+
+
         ?>
         <!-- end sidebar -->
 
@@ -46,7 +49,7 @@
                         <span>Course</span>
                     </div>
                     <div class="card__nbr-course">
-                        <span class="h5 fw-bold nbr">13</span>
+                        <span class="h5 fw-bold nbr"><?php echo $nbr_cours; ?></span>
                     </div>
                 </div>
 

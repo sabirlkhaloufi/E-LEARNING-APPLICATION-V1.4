@@ -3,6 +3,11 @@
     font-family: 'Montserrat',sans-serif;
     font-style: normal;
 }
+.alert{
+    height: 30px !important;
+    padding: 3px 3px;
+    font-size: 15px;
+}
 .bg-sign-in{
     background:linear-gradient(69.66deg, #00C1FE 19.39%, #FAFFC1 96.69%);
     height:100vh;
