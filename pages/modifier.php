@@ -14,7 +14,8 @@
     include 'conixion.php';
     $_SESSION["id"]= $_GET['Id'];
     $id = $_SESSION["id"];
-    $statement = $con -> query("SELECT * FROM students_list WHERE Id = $id");
+    $statement = $con -> prepare("SELECT * FROM students_list WHERE Id = $id");
+    $statement->execute();
     $table = $statement -> fetch();
 
   ?>

@@ -16,8 +16,9 @@
         $EnrollNumber = $_POST['EnrollNumber'];
         $DateOfAdmission = $_POST['DateOfAdmission'];
 
-        $requete = $con->prepare("INSERT INTO students_list(img,Name,Email,Phone,EnrollNumber,DateOfAdmission) VALUES(?,?,?,?,?,?)");
-        $requete->execute(array($image,$Name,$Email,$Phone,$EnrollNumber,$DateOfAdmission));
+        $requete = $con->prepare("INSERT INTO students_list(img,Name,Email,Phone,EnrollNumber,DateOfAdmission) VALUES('$image','$Name','$Email','$Phone','$EnrollNumber','$DateOfAdmission')");
+        //$requete->execute(array($image,$Name,$Email,$Phone,$EnrollNumber,$DateOfAdmission));
+        $requete->execute();
     }
     header('location:students_list.php')
     ?>

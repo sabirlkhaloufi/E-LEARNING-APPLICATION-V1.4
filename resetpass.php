@@ -9,8 +9,6 @@ if (isset($_POST['submit'])){
     $statment = $con -> prepare($requete);
     $statment -> execute();
     $result = $statment -> fetch();
-    echo $_POST['username'];
-    echo $result['Email'];
     if ($username == $result['username'] && $email == $result['Email']){
         //header("location:newpass.php");
         echo $result['username'];
