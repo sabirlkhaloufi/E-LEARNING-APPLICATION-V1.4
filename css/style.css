@@ -12,8 +12,20 @@
     background:linear-gradient(69.66deg, #00C1FE 19.39%, #FAFFC1 96.69%);
     height:100vh;
 }
-.form-sign-in{
+.form-sign-in,.sign-up{
     border-radius: 10px;
+    width: 380px;
+}
+.register{
+    display: none !important;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.644);
+    width: 100vw;
+    height: 100vh;
+}
+.register-active{
+    display: flex !important;
+    transition: 1s ease-out;
 }
 button[type="submit"]{
     background-color: #00C1FE;
@@ -150,4 +162,5 @@ table tbody{
     .hidden-sidebar-mobile{
         margin-left: -50%;
     }
+    
 }

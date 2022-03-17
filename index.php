@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
    <main class="bg-sign-in d-flex justify-content-center align-items-center">
-      <div class=" form-sign-in bg-white mt-2 h-auto mb-2 text-center pt-4 pb-3 pe-4 ps-4 d-flex flex-column">
+      <div class=" form-sign-in bg-white mt-2 h-auto mb-2 text-center pt-2 pe-4 ps-4 d-flex flex-column">
         <h1 class="E-classe text-start ms-3 ps-1" >E-classe</h1>
         <div>
           <h2 class=" sign-in text-uppercase">sign in</h2>
@@ -20,7 +19,7 @@
         <?php
           if(isset($_GET['error'])){
             if($_GET['error'] == "please enter your email or password"){
-              echo '<div class="alert alert-danger" role="alert">
+              echo '<div sclass="alert alert-danger" role="alert">
             please enter your email or password
           </div>';
             }
@@ -46,10 +45,12 @@
   </div>
           <button type="submit" name="submit" class="btn text-white w-100 text-uppercase">sign in</button>
           <p class="mt-4">Forgot your password? <a href="resetpass.php">Reset Password</a></p>
+          
         </form>
+        <a href="sing-up.php" class="btn-register btn btn-success mb-3">Create New Account</a>
      </div>
-   </main>
 
+   </main>
    <script src="/js/bootstrap.bundle.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php 
     include 'conixion.php';
     if(isset($_POST['submit'])){
-
+        
         $image = $_FILES['img']['name'];
         $tempname = $_FILES['img']['tmp_name'];  
         $folder = "../assets/img/".$image;
