@@ -16,15 +16,31 @@
     border-radius: 10px;
     width: 380px;
 }
-.register{
-    display: none !important;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.644);
+
+.bg-show{
+    display: block !important;
+    z-index: 0;
+}
+.bg{
+    background-color: rgba(0, 0, 0, 0.575);
     width: 100vw;
     height: 100vh;
+    position: fixed;
+    top: 0;
+    cursor: pointer;
+    display: none;
+}
+.register{
+    background: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -1000px;
+    transform: translate(-190px,-260px);
+    transition: 1s ease-out;
 }
 .register-active{
-    display: flex !important;
+    margin-top:0;
     transition: 1s ease-out;
 }
 button[type="submit"]{
@@ -146,6 +162,9 @@ table tbody{
     background-color: #00C1FE;
     border-radius: 5px;
     width: 130px;
+}
+.valid{
+    color: red;
 }
 @media screen and (min-width:768px){
     .bg-sidebar{

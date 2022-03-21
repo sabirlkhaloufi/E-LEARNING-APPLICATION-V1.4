@@ -32,7 +32,7 @@
         <div>
           <h2 class=" sign-in text-uppercase">sign up</h2>
         </div>
-        <form method="POST" id="signup" action="createaccout.php">
+        <form method="POST" id="signup" action="createaccout.php" onsubmit="return validateInput();">
           <div class="mb-3 mt-3 text-start">
             <label for="username">username:</label>
             <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" required>
