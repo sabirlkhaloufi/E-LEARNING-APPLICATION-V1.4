@@ -2,9 +2,9 @@
 
 dashboard simple pour gestion des course,students,payments...
 
-## lien de site :
-  https://eclasseycode.000webhostapp.com/
-  
+## lien de vedeo in youtube :
+https://www.youtube.com/watch?v=bDfINmhpzd0
+
 ## technologie utiliser
   ### front end :
   html,css,framework bootstrap .
