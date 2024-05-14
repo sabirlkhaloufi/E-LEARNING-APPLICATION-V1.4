@@ -2,7 +2,7 @@
 
 dashboard simple pour gestion des course,students,payments...
 
-## lien de vedeo in youtube :
+## link vedeo in youtube :
 https://www.youtube.com/watch?v=bDfINmhpzd0
 
 ## technologie utiliser
